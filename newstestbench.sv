@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 `timescale 1ns / 1ns
 
 module news_tb;
@@ -26,7 +27,7 @@ begin
 	#10 {N,D,Q} = 3'b100; //25 cents
 	#10 {N,D,Q} = 3'b001; //50cents, so return 15 (dime and nickel)
 	
-	#30	{N,D,Q} = 3'b001; //Quarter
+	#10	{N,D,Q} = 3'b001; //Quarter
 	#10	{N,D,Q} = 3'b000;
 	#10	{N,D,Q} = 3'b100; //Nickel
 	#10	{N,D,Q} = 3'b000;
@@ -38,4 +39,3 @@ initial
 	$monitor($stime,R,N1,D1,D2,N,D,Q,clk);
 	
 endmodule
-

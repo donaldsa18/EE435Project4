@@ -1,4 +1,3 @@
-
 module newspaper(R,N1,D1,D2,Q,D,N,clk);
 import states::*;
 output R,N1,D1,D2;
@@ -40,4 +39,5 @@ always @(posedge clk) begin
 	endcase
 	state <= nextstate;
 end
+
 endmodule
