@@ -16,25 +16,25 @@ end
 
 always @(posedge clk) begin
 	case(state)
-	S0: 	if(Q)      begin nextstate <= S25; R <= 1'b0; {N1,D1,D2} <= 3'b000; end
+	S0: 	if(Q)  begin nextstate <= S25; R <= 1'b0; {N1,D1,D2} <= 3'b000; end
 		else if(D) begin nextstate <= S10; R <= 1'b0; {N1,D1,D2} <= 3'b000; end
 		else if(N) begin nextstate <= S5;  R <= 1'b0; {N1,D1,D2} <= 3'b000; end
 	S5:	if(Q)      begin nextstate <= S30; R <= 1'b0; {N1,D1,D2} <= 3'b000; end
 		else if(D) begin nextstate <= S15; R <= 1'b0; {N1,D1,D2} <= 3'b000; end
 		else if(N) begin nextstate <= S10; R <= 1'b0; {N1,D1,D2} <= 3'b000; end
-	S10:	if(Q)      begin nextstate <= S0;  R <= 1'b1; {N1,D1,D2} <= 3'b000; end
+	S10:	if(Q)  begin nextstate <= S0;  R <= 1'b1; {N1,D1,D2} <= 3'b000; end
 		else if(D) begin nextstate <= S20; R <= 1'b0; {N1,D1,D2} <= 3'b000; end
 		else if(N) begin nextstate <= S15; R <= 1'b0; {N1,D1,D2} <= 3'b000; end
-	S15:	if(Q)      begin nextstate <= S0;  R <= 1'b1; {N1,D1,D2} <= 3'b000; end
+	S15:	if(Q)  begin nextstate <= S0;  R <= 1'b1; {N1,D1,D2} <= 3'b000; end
 		else if(D) begin nextstate <= S25; R <= 1'b0; {N1,D1,D2} <= 3'b000; end
 		else if(N) begin nextstate <= S20; R <= 1'b0; {N1,D1,D2} <= 3'b000; end
-	S20:	if(Q)      begin nextstate <= S0;  R <= 1'b1; {N1,D1,D2} <= 3'b010; end
+	S20:	if(Q)  begin nextstate <= S0;  R <= 1'b1; {N1,D1,D2} <= 3'b010; end
 		else if(D) begin nextstate <= S30; R <= 1'b0; {N1,D1,D2} <= 3'b000; end
 		else if(N) begin nextstate <= S25; R <= 1'b0; {N1,D1,D2} <= 3'b000; end
-	S25:	if(Q)      begin nextstate <= S0;  R <= 1'b1; {N1,D1,D2} <= 3'b110; end
+	S25:	if(Q)  begin nextstate <= S0;  R <= 1'b1; {N1,D1,D2} <= 3'b110; end
 		else if(D) begin nextstate <= S0;  R <= 1'b1; {N1,D1,D2} <= 3'b000; end
 		else if(N) begin nextstate <= S30; R <= 1'b0; {N1,D1,D2} <= 3'b000; end
-	S30:	if(Q)      begin nextstate <= S0;  R <= 1'b1; {N1,D1,D2} <= 3'b001; end
+	S30:	if(Q)  begin nextstate <= S0;  R <= 1'b1; {N1,D1,D2} <= 3'b001; end
 		else if(D) begin nextstate <= S0;  R <= 1'b1; {N1,D1,D2} <= 3'b100; end
 		else if(N) begin nextstate <= S0;  R <= 1'b1; {N1,D1,D2} <= 3'b000; end
 	endcase
