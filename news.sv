@@ -38,8 +38,6 @@ always @(posedge clk) begin
 		else if(D) begin nextstate <= S0;  R <= 1'b1; {N1,D1,D2} <= 3'b100; end
 		else if(N) begin nextstate <= S0;  R <= 1'b1; {N1,D1,D2} <= 3'b000; end
 	endcase
-end
-always @(negedge clk) begin
 	state <= nextstate;
 end
 endmodule
